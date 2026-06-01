@@ -33,6 +33,8 @@ And finally, add the following scripts to your package.json to easily format and
     "lint": "biome check .",
   }
 }
+```
+
 ## License
 
 MIT
