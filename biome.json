@@ -1,0 +1,70 @@
+{
+  "$schema"   : "https://biomejs.dev/schemas/latest/schema.json",
+  "vcs"       : {"enabled": true, "clientKind": "git", "useIgnoreFile": true},
+  "files"     : {
+    "ignoreUnknown": false,
+    "includes"     : [
+      "**/*",
+      "!**/node_modules",      "!**/.next",             "!**/dist",              "!**/build",
+      "!**/coverage",          "!**/.turbo",            "!**/.nuxt",             "!**/.svelte-kit",
+      "!**/.vercel",           "!**/.wrangler",         "!**/.expo",             "!**/.zed",
+      "!**/.vscode",           "!**/.history",          "!**/src-tauri",         "!**/convex/_generated",
+      "!**/routeTree.gen.ts"
+    ]
+  },
+  "formatter" : {
+    "enabled"          : true,
+    "indentStyle"      : "tab",
+    "indentWidth"      : 2,
+    "lineWidth"        : 80,
+    "lineEnding"       : "lf",
+    "attributePosition": "auto"
+  },
+  "assist"    : {
+    "enabled": true,
+    "actions": { "source": {"organizeImports": "on"} }
+  },
+  "linter"    : {
+    "enabled": true,
+    "rules"  : {
+      "recommended": true,
+      "suspicious" : {"noExplicitAny": "off"},
+      "style"      : {
+        "useImportType"          : "off",
+        "noParameterProperties"  : "off",
+        "noUnusedTemplateLiteral": "off",
+        "useSelfClosingElements" : "off"
+      },
+      "a11y"       : {
+        "useButtonType"              : "off",
+        "useValidAnchor"             : "off",
+        "noLabelWithoutControl"      : "off",
+        "noStaticElementInteractions": "off",
+        "noSvgWithoutTitle"          : "off"
+      },
+      "complexity" : {"noForEach": "off", "noStaticOnlyClass": "off"},
+      "correctness": {"useExhaustiveDependencies": "info"},
+      "nursery"    : {
+        "useSortedClasses": {
+          "level"  : "warn",
+          "fix"    : "safe",
+          "options": { "functions": ["clsx", "cva", "cn"] }
+        }
+      }
+    }
+  },
+  "javascript": {
+    "formatter": {
+      "quoteStyle"      : "double",
+      "jsxQuoteStyle"   : "double",
+      "quoteProperties" : "asNeeded",
+      "semicolons"      : "asNeeded",
+      "trailingCommas"  : "all",
+      "arrowParentheses": "always",
+      "bracketSameLine" : false
+    },
+    "parser"   : {"unsafeParameterDecoratorsEnabled": true}
+  },
+  "json"      : { "formatter": {"trailingCommas": "none"} },
+  "css"       : { "parser": {"tailwindDirectives": true} }
+}

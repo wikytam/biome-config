@@ -1,0 +1,14 @@
+{
+  "name": "@wikytam/biome-config",
+  "version": "1.0.0",
+  "description": "My personal Biome JS config for all projects",
+  "main": "biome.json",
+  "keywords": ["biome", "biomejs", "lint", "formatter", "config"],
+  "author": "Tam K",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/wikytam/biome-config.git"
+  },
+  "files": ["biome.json", "README.md"]
+}
